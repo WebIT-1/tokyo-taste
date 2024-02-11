@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Taste Release Date</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            margin-bottom: 50px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 128px;
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF5733;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="websiteName">Tokyo Taste <br><span style="color: aqua; font-size: 100px; text-decoration: underline;">Soon</span></h1>
+        <p style="font-size: 32px;">Release Date: 16.02.2024</p>
+        <div id="timer"></div>
+    </div>
+
+    <footer>
+        <p>© 2024 Webitro-Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set the release date (Year, Month(0-11), Day, Hour, Minute, Second)
+        const releaseDate = new Date(2024, 1, 16, 0, 0, 0).getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            // Get the current date and time
+            const now = new Date().getTime();
+            
+            // Calculate the remaining time
+            const distance = releaseDate - now;
+            
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the countdown
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+            
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
