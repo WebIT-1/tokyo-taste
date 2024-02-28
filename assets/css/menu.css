@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fallback color */
+    background-image: url('../images/hero-slider-1.jpg');
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 5px 0;
+}
+
+header a{
+    /* align logo to left but still text to be centered */
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+
+} 
+
+.menu-section {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.menu-section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+li h3, li p, li span {
+    margin: 0;
+}
+
+li h3 {
+    flex: 1; /* Expand to fill available space */
+}
+
+li p {
+    flex: 1; /* Expand to fill available space */
+    padding: 0 10px; /* Add padding between elements */
+}
+
+li span {
+    font-weight: bold;
+    padding-right: 20px; /* Adjust the padding between weight and price */
+}
